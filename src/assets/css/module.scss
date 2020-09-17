@@ -1,0 +1,111 @@
+
+@keyframes slideDownward{
+    from {
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+}
+.content{
+    background-image: radial-gradient(circle,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.8) 100%);
+}
+.corner-text{
+    margin: 0.5rem 0 0 0.5rem;
+    font-size: 0.16rem;
+}
+.corner-mouse{
+    width: 0.21rem;
+    height: 0.77rem;
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    background: url(../images/img-1.png) no-repeat;
+    background-size: 100%;
+    &:after{
+        content: "";
+        display: block;
+        width: 0.04rem;
+        height: 0.04rem;
+        margin: 0 auto;
+        margin-top: 0.07rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        animation: 1s slideDownward infinite linear;
+    }
+}
+.corner-right{
+    width: 0.03rem;
+    height: 20%;
+    border-radius: 1rem;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) , rgba(255,255,255,0.3));
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+.main-text{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+    white-space: nowrap;
+    transform: translate(-50%,-50%);
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: -1.2rem;
+        bottom: -0.5rem;
+        width: 4rem;
+        height: 4rem;
+        pointer-events: none;
+        background: url(../images/img-2.png) no-repeat;
+    }
+    strong{
+        color: #faad14;
+        font-size: 0.6rem;
+        font-weight: inherit;
+        letter-spacing:-12px;
+    }
+    .author-wrap{
+        .text{
+            display: inline-block;
+            font-size: 0.24rem;
+            letter-spacing:-5px;
+            margin-top: 1.5rem;
+            &:after{
+                content: "";
+                display: block;
+                margin-top: 0.15rem;
+                width: 100%;
+                height: 3px;
+                border-radius: 1rem;
+                background-image: linear-gradient(to right, rgba(250,173,20,1) , rgba(250,173,20,0));
+            }
+        }
+        .website{
+            font-size: 0.4rem;
+            margin-top: 0.1rem;
+            a{
+                display: block;
+                color:#ffffff;
+                margin-right: 0.1rem;
+                transition: all 0.5s;
+                    
+                &:hover{
+                    transform: translateY(6px);
+                }
+                &:nth-child(1):hover{
+                    color: #ffe300;
+                }
+                &:nth-child(2):hover{
+                    color: #3d7eff;
+                }
+                &:nth-child(3):hover{
+                    color: #f082ac;
+                }
+            }
+        }
+    }
+}
