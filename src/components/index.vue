@@ -1,6 +1,6 @@
 <template>
 	<div class="index">
-		<div class="f-full content">
+		<div class="f-full content content-default" ref="content">
 			<div class="corner-text">UI/UX Design</div>
 			<div class="main-text">
 				<p>HOUCZ9-</p>
@@ -16,7 +16,7 @@
 			</div>
 			<div class="corner-mouse"></div>
 			<div class="corner-right"></div>
-			
+			<img src="../assets/images/img-4.png" @load="handleLoad" style="display: none;">
 		</div>
 		
 	</div>
@@ -36,7 +36,10 @@
 			
 		},
 		methods:{
-			
+			handleLoad(){
+				this.$refs.content.classList.remove("content-default");
+				this.$refs.content.classList.add("content-animation");
+			}
 		}
 	}
 </script>

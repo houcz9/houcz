@@ -8,8 +8,46 @@
         transform: translateY(16px);
     }
 }
+//背景动画
+@keyframes bjImages{
+    0% {
+        background: url(../images/img-3.png);
+    }
+    25% {
+        background: url(../images/img-4.png);
+    }
+    50% {
+        background: url(../images/img-4.png);
+    }
+    75% {
+        background: url(../images/img-3.png);
+    }
+    100% {
+        background: url(../images/img-3.png);
+    }
+}
 .content{
-    background-image: radial-gradient(circle,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.8) 100%);
+    background-size: cover;
+    z-index: 1;
+    &.content-animation{
+        animation: bjImages 8s infinite linear;
+    }
+    &.content-default{
+        background: url(../images/loading.png) no-repeat;
+        background-size: cover;
+    }
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom:0;
+        right: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-image: radial-gradient(circle,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.8) 100%);
+    }
 }
 .corner-text{
     margin: 0.5rem 0 0 0.5rem;

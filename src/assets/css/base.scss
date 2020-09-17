@@ -9,25 +9,8 @@ html,body,#app{
     margin: 0;
     padding: 0;
 }
-//背景动画
-@keyframes bjImages{
-    0% {
-        background: url(../images/img-3.png);
-    }
-    25% {
-        background: url(../images/img-4.png);
-    }
-    50% {
-        background: url(../images/img-4.png);
-    }
-    75% {
-        background: url(../images/img-3.png);
-    }
-    100% {
-        background: url(../images/img-3.png);
-    }
-}
-body{color: #ffffff; animation: bjImages 8s infinite linear;  background-size: cover;}
+
+body{color: #ffffff;}
 @font-face{font-family: "bahnschrift";src: url("../font/bahnschrift.ttf") format("truetype");}
 @font-face{font-family: "alibaba";src: url("../font/alibaba.ttf") format("truetype");}
 /*flex布局*/

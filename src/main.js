@@ -7,7 +7,6 @@ import router from './router'
 //css文件
 import './assets/css/master.scss'
 
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
