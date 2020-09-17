@@ -17,6 +17,7 @@
 			<div class="corner-mouse"></div>
 			<div class="corner-right"></div>
 			<img src="../assets/images/img-4.png" @load="handleLoad" style="display: none;">
+			<img src="../assets/images/img-3.png" @load="handleLoad" style="display: none;">
 		</div>
 		
 	</div>
@@ -27,18 +28,21 @@
 		name: 'index',
 		data() {
 			return {
-				
+				number:0
 			}
 		},
 		created() {
 		},
 		mounted(){
-			
+			this.number=0;
 		},
 		methods:{
 			handleLoad(){
-				this.$refs.content.classList.remove("content-default");
-				this.$refs.content.classList.add("content-animation");
+				this.number++;
+				if(this.number>1){
+					this.$refs.content.classList.remove("content-default");
+					this.$refs.content.classList.add("content-animation");
+				}
 			}
 		}
 	}
